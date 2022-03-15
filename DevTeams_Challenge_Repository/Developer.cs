@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DevTeams_Challenge_Repository
 {
-    public enum TeamAssignment { FrontEnd, BackEnd, Testing}
+    public enum TeamAssignment { FrontEnd = 1, BackEnd, Testing}
     public class Developer
     {
         //This is our POCO class. It will define our properties and constructors of our Developer objects.

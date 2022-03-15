@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Developer.cs" />
-    <Compile Include="DevTeams.cs" />
+    <Compile Include="DevTeam.cs" />
     <Compile Include="DeveloperRepo.cs" />
     <Compile Include="DevTeamsRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

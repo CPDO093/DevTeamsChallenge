@@ -45,6 +45,11 @@ namespace DevTeams_Challenge_Repository
         {
             return _devDirectory.Where(ol => ol.OnlineLearning == onlineLearning).ToList();
         }
+       
+        public List<Developer> GetAllDevs()
+        {
+            return _devDirectory;
+        }
         // U
         public bool UpdateExistingDevleloper(Developer newContent, int id)
         {
@@ -71,6 +76,11 @@ namespace DevTeams_Challenge_Repository
             bool deleteDeveloper = _devDirectory.Remove(existingDev);
             return deleteDeveloper;
 
+        }
+
+        public DeveloperRepo GetDevById()
+        {
+            throw new NotImplementedException();
         }
     }
     

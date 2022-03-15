@@ -167,44 +167,113 @@ namespace DevTeams_Challenge_Console
         //Read
         private void DisplayAllDevelopers()
         {
+            Console.Clear();
+            DisplayAllDevelopers();
+            Console.ReadKey();
+            
 
         }
         private void DisplayDevelopersByTeam()
         {
+            Console.Clear();
+            DisplayDevelopersByTeam();
+            Console.ReadKey();
 
         }
         private void DisplayDeveloperById()
         {
+            Console.Clear();
+            DisplayDeveloperById();
+            Console.ReadKey();
 
         }
         private void PluralSightAccess()
         {
+            Console.Clear();
+            PluralSightAccess();
+            Console.ReadKey();
 
         }
 
         //Update
         private void UpdateExistingDeveloper()
         {
+            Console.Clear();
+   /*      Console.WriteLine("Please Enter Developers ID: ");
+            DeveloperRepo existingDev = new DeveloperRepo();
+            DeveloperRepo oldContent = existingDev.GetDevById();
+            //FirstNAme
+            Console.WriteLine("Enter First Name: ");
+             FirstName = Console.ReadLine();
+            //Last Name
+            Console.WriteLine("Enter Last Name: ");
+            newDev.LastName = Console.ReadLine();
+            //ID
+            Console.WriteLine("Enter Developer ID: ");
+            newDev.DevID = int.Parse(Console.ReadLine());
+            //Team
+            Console.WriteLine("Choose Assigned Team\n " +
+                "1. FrontEnd\n" +
+                "2. BackEnd\n" +
+                "3. Testing");
+            string teamInPut = Console.ReadLine();
+            int teamAssigned = int.Parse(teamInPut);
+          newDev.TeamAssignment = (TeamAssignment)teamAssigned;  */
 
+
+            Console.ReadKey();
         }
         private void AddDevelopertoDevTeam()
         {
+            Console.Clear();
             // Dev Assignment
             //FirstNAme
             //Last Name
             //ID
             //Team
-            
+
+            Console.ReadKey();
+
         }
 
         //Delete
         private void DeleteExistingDeveloper()
         {
+            Console.Clear();
+            List<Developer> devList = _devTeamRepo.GetAllDevs();
+            int count = 0;
 
+            foreach (Developer dev in devList)
+            {
+                count++;
+                Console.WriteLine($"{count}. {dev.DevID} {dev.FirstName} {dev.LastName}");
+            }
+            Console.Write("Which Developer do you want to remove: ");
+            int targetId = int.Parse(Console.ReadLine());
+            int targetIndex = targetId - 1;
+            if (targetIndex >= 0 && targetIndex < devList.Count())
+            {
+                 Developer desiredDev = devList[targetIndex];
+
+                if (_devTeamRepo.RemoveExisitingDeveloper(desiredDev))
+                {
+                    Console.WriteLine($"{desiredDev.DevID} {desiredDev.FirstName}" +
+                        $" {desiredDev.LastName} deleted successfully");
+                }
+                else
+                    Console.WriteLine("Something went wrong.");
+            }
+            else
+                Console.WriteLine("No Developer has that ID");
+
+            Console.ReadKey();
         }
         private void DeleteExisitingDevTeam()
         {
+            Console.Clear();
 
+
+            Console.ReadKey();
         }
 
 
